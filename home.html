@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Information</title>
+  </head>
+  <body>
+    <h2>Game Profile Form</h2>
+    <form action="/submit" method="POST">
+      <label for="nickname">Nick Name:</label>
+      <input type="text" id="nickname" name="nickname" required />
+      <br>
+
+      <label for="playsSince">Plays Since (Year):</label>
+      <input
+        type="number"
+        id="playsSince"
+        name="playsSince"
+        min="2020"
+        max="2024"
+        required
+      />
+      <br>
+
+      <label for="favAgent">Favourite Agent:</label>
+      <input type="text" id="favAgent" name="favAgent" required />
+      <br>
+
+      <label for="elo">ELO:</label>
+      <input type="text" id="elo" name="elo" required />
+      <br>
+
+      <label for="favSkin">Favourite Skin:</label>
+      <input type="text" id="favSkin" name="favSkin" required />
+      <br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
