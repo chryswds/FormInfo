@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Player Information</title>
   </head>
   <body>
@@ -10,7 +11,7 @@
     <form action="/submit" method="POST">
       <label for="nickname">Nick Name:</label>
       <input type="text" id="nickname" name="nickname" required />
-      <br>
+      <br />
 
       <label for="playsSince">Plays Since (Year):</label>
       <input
@@ -21,19 +22,28 @@
         max="2024"
         required
       />
-      <br>
+      <br />
 
       <label for="favAgent">Favourite Agent:</label>
       <input type="text" id="favAgent" name="favAgent" required />
-      <br>
+      <br />
 
-      <label for="elo">ELO:</label>
-      <input type="text" id="elo" name="elo" required />
-      <br>
+      <label for="elo">Elo:</label>
+      <select name="elo" id="elo">
+        <option value="iron">Iron</option>
+        <option value="bronze">Bronze</option>
+        <option value="silver">Silver</option>
+        <option value="gold">Gold</option>
+        <option value="Platinum">Platinum</option>
+        <option value="diamond">Diamond</option>
+        <option value="ascendent">Ascendent</option>
+        <option value="imortal">Imortal</option>
+        <option value="radiant">Radiant</option>
+      </select>
 
       <label for="favSkin">Favourite Skin:</label>
       <input type="text" id="favSkin" name="favSkin" required />
-      <br>
+      <br />
 
       <button type="submit">Submit</button>
     </form>
