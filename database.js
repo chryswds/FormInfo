@@ -14,3 +14,11 @@ application.get("/", function (req, res) {
     res.send(results);
   });
 });
+
+app.listen(3050, function () {
+  console.log("App listening on port 3050");
+  connection.connect(function (err) {
+    if (err) throw err;
+    console.log("Database connected");
+  });
+});
