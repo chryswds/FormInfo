@@ -10,16 +10,16 @@ connection.connect(function (err) {
   console.log("Database connected");
 });
 
-app.post("/", function (req, res) {
-  const { Nickname, PlaysSince, FavAgent, Elo, FavSkin } = req.body;
+app.post("/submit", function (req, res) {
+  const { nickname, playsSince, favAgent, elo, favSkin } = req.body;
 
-  if ((Nickname, PlaysSince, FavAgent, Elo, FavSkin)) {
+  if (nickname && playsSince && favAgent && elo && favSkin) {
     const sql =
-      "INSTERT INTO player (Nickname, PlaysSince, FavAgent, Elo, FavSkin) VALUES (?,?,?,?,?)";
+      "INSERT INTO player (Nickname, PlaysSince, FavAgent, Elo, FavSkin) VALUES (?,?,?,?,?)";
 
     connection.query(
       sql,
-      [Nickname, PlaysSince, FavAgent, Elo, FavSkin],
+      [nickname, playsSince, favAgent, elo, favSkin],
       function (err, results) {
         if (err) {
           console.error("error inserting into database: ", err);
